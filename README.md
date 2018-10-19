@@ -1,2 +1,3 @@
 # persuadant
-responsive layout experiments
+
+Experiments with responsive layouts and media queries
