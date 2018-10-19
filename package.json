@@ -4,7 +4,7 @@
   "description": "simple responsive experiments",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "less-watch-compiler & node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +20,8 @@
   "engines": {
     "node": ">=8.9.3"
   },
-  "dependencies": {
-    "connect": "^3.6.6",
-    "serve-static": "^1.13.2"
+  "devDependencies": {
+    "less-watch-compiler": "^1.12.1",
+    "live-server": "^1.2.0"
   }
 }
