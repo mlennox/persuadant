@@ -2,6 +2,7 @@
    v2.0b1 | 201101 
    NOTE: WORK IN PROGRESS
    USE WITH CAUTION AND TEST WITH ABANDON */
+
 html,
 body,
 div,
@@ -88,6 +89,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+// for reponsive rems based sizing
 html {
   font-size: 62.5%;
 }
@@ -123,10 +125,12 @@ q:after {
   content: "";
   content: none;
 }
+
 /* remember to define visible focus styles! 
 :focus {
 	outline: ?????;
 } */
+
 /* remember to highlight inserts somehow! */
 ins {
   text-decoration: none;
@@ -134,33 +138,10 @@ ins {
 del {
   text-decoration: line-through;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body {
-  border: 1px solid magenta;
-  padding: 1rem 0;
-}
-header {
-  background: red;
-}
-header h1 {
-  font-size: 2.4rem;
-  background-image: none, url("../images/noun_stars_1741394.svg");
-  background-repeat: no-repeat;
-  background-position-y: 0.5rem;
-  padding-left: 2.5rem;
-}
-header nav ul {
-  display: flex;
-  margin: 1rem 0;
-}
-main {
-  background: rgba(118, 252, 118, 0.2);
-}
-@media all and (max-width: 699px) {
-  body {
-    background: green;
-  }
-}
+
+// end reset

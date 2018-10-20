@@ -9,3 +9,9 @@ Uses node 8.9.3 to run the web server that will be accessible at `localhost:8080
 ```bash
 npm start
 ```
+
+## Responsive layout
+
+## Attributions
+
+logo - stars by Made x Made from the Noun Project
