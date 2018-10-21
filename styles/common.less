@@ -1,9 +1,14 @@
+@import "variables.less";
+
 body {
-  // width: 100%;
-  border: 1px solid magenta;
+  width: 100%;
+  box-shadow: inset 0 0 20px black;
+  // border: 1px solid magenta;
   padding: 1rem 0;
 }
 header {
+  box-shadow: inset 0 0 20px white;
+  width: 100%;
   display: block;
   position: relative;
   background: red;
@@ -13,24 +18,51 @@ header {
     background-image: none, url("../images/noun_stars_1741394.svg");
     background-repeat: no-repeat;
     background-position-y: 0.5rem;
-    padding-left: 2.5rem;
+    text-indent: 2.5rem;
   }
   nav {
-    transition: all 2s ease-in-out 0;
+    transition: @transition_std;
     position: absolute;
     bottom: 0;
     left: 0;
     background: yellow;
     width: 8rem;
-    height: 3rem;
+    height: 2rem;
     margin-bottom: 0;
     ul {
+      &:before {
+        content: "";
+        transition: @transition_std;
+        transform: scale(0);
+        display: block;
+        position: absolute;
+        background-image: linear-gradient(
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 1) 25%,
+          rgba(255, 255, 255, 0) 25%,
+          transparent 75%,
+          transparent 100%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        background-size: 1rem 44%;
+      }
+      transition: @transition_std;
+      height: 2rem;
       background: magenta;
       display: flex;
 
       li {
-        padding: 0.5rem 1rem;
+        a {
+          transition: @transition_std;
+          padding: 0.5rem 1rem;
+          height: 2rem;
+          scale: 1;
+          opacity: 1;
+        }
       }
+      // &:hover {
+      //   // expand the menu
+      // }
     }
   }
 }

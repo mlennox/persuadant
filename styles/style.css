@@ -2,7 +2,6 @@
    v2.0b1 | 201101 
    NOTE: WORK IN PROGRESS
    USE WITH CAUTION AND TEST WITH ABANDON */
-body,
 div,
 span,
 applet,
@@ -87,7 +86,8 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-html {
+html,
+body {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
@@ -144,10 +144,13 @@ table {
   border-spacing: 0;
 }
 body {
-  border: 1px solid magenta;
+  width: 100%;
+  box-shadow: inset 0 0 20px black;
   padding: 1rem 0;
 }
 header {
+  box-shadow: inset 0 0 20px white;
+  width: 100%;
   display: block;
   position: relative;
   background: red;
@@ -158,24 +161,39 @@ header h1 {
   background-image: none, url("../images/noun_stars_1741394.svg");
   background-repeat: no-repeat;
   background-position-y: 0.5rem;
-  padding-left: 2.5rem;
+  text-indent: 2.5rem;
 }
 header nav {
-  transition: all 2s ease-in-out 0;
+  transition: all 1s ease-in-out 500ms;
   position: absolute;
   bottom: 0;
   left: 0;
   background: yellow;
   width: 8rem;
-  height: 3rem;
+  height: 2rem;
   margin-bottom: 0;
 }
 header nav ul {
+  transition: all 1s ease-in-out 500ms;
+  height: 2rem;
   background: magenta;
   display: flex;
 }
-header nav ul li {
+header nav ul:before {
+  content: "";
+  transition: all 1s ease-in-out 500ms;
+  transform: scale(0);
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(#ffffff 0%, #ffffff 25%, rgba(255, 255, 255, 0) 25%, transparent 75%, transparent 100%, #ffffff 100%);
+  background-size: 1rem 44%;
+}
+header nav ul li a {
+  transition: all 1s ease-in-out 500ms;
   padding: 0.5rem 1rem;
+  height: 2rem;
+  scale: 1;
+  opacity: 1;
 }
 main {
   background: rgba(118, 252, 118, 0.2);
@@ -186,10 +204,25 @@ main {
   }
   header nav {
     bottom: 100%;
-    left: 80%;
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: -3rem;
+    left: 100%;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: -2rem;
+    margin-left: -2rem;
+  }
+  header nav ul:before {
+    transform: scale(1);
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  header nav ul li {
+    font-size: 0.1rem;
+  }
+  header nav ul li a {
+    scale: 0;
+    opacity: 0;
   }
 }
 @media all and (min-width: 601px) {
