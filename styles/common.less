@@ -8,9 +8,9 @@ body {
   font-family: sans-serif;
 }
 header {
+  transition: @transition_std;
   width: 100%;
   display: block;
-  float: left;
   position: relative;
   height: 6.5rem;
   // box-shadow: inset 0 0 20px white;
@@ -75,5 +75,26 @@ header {
 }
 
 main {
-  // background: rgba(118, 252, 118, 0.2);
+  padding: 1rem;
+  color: #eeeeee;
+
+  .sidebar {
+    display: none;
+  }
+
+  article {
+    h1 {
+      font-size: 2.4rem;
+      margin: 1rem 0;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      margin: 1rem 0 1.2rem;
+    }
+  }
 }
